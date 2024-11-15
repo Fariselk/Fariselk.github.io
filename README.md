@@ -1,2 +1,2 @@
 Website link:
-  fariselk.github.io/
+  fariselk.github.io

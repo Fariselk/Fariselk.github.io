@@ -1,3 +1,10 @@
+:root {
+    --primary-color: #ff5b00;
+    --secondary-color: #708090;
+    --accent-color: orangered;
+    --box-shadow: 5px 5px 5px rgb(163, 2, 2);
+}
+
 @font-face {
     font-family: nasalization;
     src: url("./fonts/nasalization-rg.otf") format("opentype");
@@ -8,9 +15,9 @@
 }
 
 body {
-    font-family: 'Abel', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'nasalization', 'Abel', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: calc(1em + 0.1vw);
-    color: white;
+    color: whitesmoke;
     border-radius: 20px;
     letter-spacing: 2px;
     background-color: black;
@@ -22,11 +29,11 @@ body {
 span {
     font-family: nasalization;
     text-transform: uppercase;
-    color: #ff5b00;
+    color: var(--primary-color);
 }
 
-p>span {
-    color: #ff5b00;
+p > span {
+    color: var(--primary-color);
     font-weight: 900;
     text-decoration: underline;
 }
@@ -100,7 +107,7 @@ h2 {
     text-transform: uppercase;
     font-family: nasalization;
     font-size: 1.2em;
-    border-block-end: 5px solid #708090;
+    border-block-end: 5px solid var(--secondary-color);
 }
 
 p {
@@ -110,10 +117,9 @@ p {
 
 .card {
     display: flex;
-    padding: 10px;
+    border: 10px;
     margin-block-end: 40px;
     border-radius: 20px;
-    box-shadow: 5px 5px 5px rgb(163, 2, 2);
 }
 
 .card.accentBorder {
@@ -121,18 +127,18 @@ p {
     padding: 10px;
     margin-block-end: 40px;
     border-radius: 20px;
-    box-shadow: 5px 5px 5px rgb(163, 2, 2);
+    box-shadow: var(--box-shadow);
     justify-content: space-between;
 }
 
 .accentBorder {
-    border: 4px solid orangered;
+    border: 4px solid var(--accent-color);
 }
 
 small {
     display: block;
     margin-block-start: 50px;
-    color: #708090;
+    color: var(--secondary-color);
     justify-items: flex-end;
 }
 
@@ -147,7 +153,7 @@ footer {
 
 footer a {
     text-decoration: none;
-    color: orangered;
+    color: var(--accent-color);
 }
 
 footer a:hover {
@@ -155,7 +161,7 @@ footer a:hover {
 }
 
 .subtitle {
-    color: #708090;
+    color: var(--secondary-color);
     text-decoration: none;
     border: none;
     text-align: left;
@@ -168,7 +174,6 @@ form {
     gap: 1em;
     padding: 20px;
     border-radius: 20px;
-    box-shadow: 5px 5px 5px rgb(163, 2, 2);
 }
 
 .form-group {
@@ -177,26 +182,34 @@ form {
 }
 
 label {
+    font-size: 1em;
     font-family: nasalization;
-    color: #ff5b00;
+    color: var(--primary-color);
     margin-block-end: 5px;
 }
 
 input,
 textarea {
+    font-size: 0.7em;
+    align-self: center;
+    width: 700px;
+    height: auto;
     padding: 10px;
     border-radius: 10px;
-    border: 1px solid #708090;
+    border: 1px solid var(--secondary-color);
     background-color: #222;
-    color: white;
-    font-family: 'Abel', sans-serif;
+    color: whitesmoke;
 }
 
 button {
+    font-size: 1em;
+    align-self: center;
+    height: 50px;
+    width: 300px;
     padding: 10px 20px;
     border-radius: 10px;
     border: none;
-    background-color: orangered;
+    background-color: var(--accent-color);
     color: white;
     font-family: nasalization;
     cursor: pointer;
@@ -205,6 +218,8 @@ button {
 
 button:hover {
     background-color: rgba(255, 91, 0, 0.8);
+    transition: transform 0.3s ease;
+    transform: scale(1.1);
 }
 
 table {
@@ -216,7 +231,7 @@ table th,
 table td {
     padding: 10px;
     text-align: left;
-    border-block-end: 1px solid #708090;
+    border-block-end: 1px solid var(--secondary-color);
 }
 
 table img {
@@ -232,8 +247,8 @@ table img {
 
 .product {
     text-align: center;
-    padding: 20px;
-    border: 1px solid #708090;
+    padding: 10px;
+    border: 1px solid var(--secondary-color);
     border-radius: 10px;
     background-color: #333;
 }
@@ -243,10 +258,13 @@ table img {
     margin: 0 auto;
     max-inline-size: 100%;
     block-size: auto;
+    height: 250px;
+    width: 450px;
+    object-fit: cover;
 }
 
 .faq-item {
-    border: 1px solid #708090;
+    border: 1px solid var(--secondary-color);
     border-radius: 10px;
     padding: 10px;
     display: flex;
@@ -258,7 +276,7 @@ table img {
 
 .product h2 {
     font-family: nasalization;
-    color: #ff5b00;
+    color: var(--primary-color);
     font-size: 1.2em;
     margin: 20px 0;
     text-align: center;
@@ -353,13 +371,16 @@ table img {
     padding: 10px;
     margin-block-end: 40px;
     border-radius: 20px;
-    box-shadow: 5px 5px 5px rgb(163, 2, 2);
+    box-shadow: var(--box-shadow);
 }
 
 select {
+    align-self: center;
+    height: 50px;
+    width: 700px;
     padding: 10px;
     border-radius: 10px;
-    border: 1px solid #708090;
+    border: 1px solid var(--secondary-color);
     background-color: #222;
     color: white;
     font-family: 'Abel', sans-serif;
@@ -369,12 +390,12 @@ select {
 }
 
 select:hover {
-    border-color: orangered;
+    border-color: var(--accent-color);
 }
 
 select:focus {
     outline: none;
-    border-color: orangered;
+    border-color: var(--accent-color);
     box-shadow: 0 0 0 2px rgba(255, 69, 0, 0.2);
 }
 
@@ -385,5 +406,5 @@ select option {
 }
 
 select option:hover {
-    background-color: orangered;
+    background-color: var(--accent-color);
 }

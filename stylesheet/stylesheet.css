@@ -217,8 +217,6 @@ fieldset label, fieldset input  {
     display: inline-block;   
 }
 
-
-
 button {
     height: 5vh;
     width: 20vw;
@@ -429,3 +427,57 @@ details p {
     line-height: 1.5;
     padding-inline-start: 50px;
 }
+
+.SuppManu {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    list-style-type: armenian;
+    text-align: center; 
+}
+
+.SuppManu li {
+    display: list-item;
+    list-style: armenian;
+    text-align: left;
+    text-decoration: underline var(--primary-color);
+}
+
+.SuppManu li:hover {
+    color: var(--accent-color);
+}
+
+.SuppManu ul {
+    align-self: center;
+    width: fit-content;
+    margin: 0 auto; 
+}
+
+.Supp {
+    display: block;
+    grid-column: 1;
+}
+
+.Manu {
+    display: block;
+    grid-column: 2;
+}
+
+.list-align {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.list-align li {
+    width: 100%;
+}
+
+div.Manu ul{
+    flex-direction: column-reverse;
+}
+
+
+
+

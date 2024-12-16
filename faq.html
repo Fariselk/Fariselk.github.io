@@ -3,9 +3,11 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="domain" content="venusianbeans.com">
         <title>Frequently Asked Questions</title>
         <link rel="stylesheet" href="./stylesheet/stylesheet.css">
-        <link rel="icon" href="./images/venusianBeanlogo.ico" type="image/x-icon">
+        <link rel="icon" href="./images/venusianBeanlogo.ico"
+            type="image/x-icon">
     </head>
     <body class="stars">
         <div id="topBar">
@@ -23,47 +25,44 @@
                     <li><a href="./products.html">Products</a></li>
                     <li><a href="./aboutus.html">About Us</a></li>
                     <li><a href="./faq.html">FAQ</a></li>
+                    <li><a href="./Sandt.html">Staff and Testimonials</a></li>
                 </ul>
             </nav>
         </div>
-
         <main>
             <section id="card" class="accentBorder">
-                <div class="faq-item">
-                    <h3>What is Venusian Beans?</h3>
-                    <p>Venusian Beans is a fictional coffee company that offers
-                        a variety of coffee products and franchises.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>Where are you located?</h3>
-                    <p>We are located at 134 rue du Zodiaque, Gatineau, QC,
-                        Canada, J9J 0H8.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>How can I contact you?</h3>
-                    <p>You can contact us via phone at (819) 968-5799 or email
-                        at fariselk88@gmail.com.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>Do you offer franchise opportunities?</h3>
+                <h3>Who is Venusian Beans?</h3>
+                <p>We are an intergalactic coffee company selling you new out of
+                    this world flavors.</p>
+                <details>
+                    <summary>Where are you located?</summary>
+                    <p>We are located at W 180⁰--E 180⁰/N 78⁰--S 65⁰ (Venus)</p>
+                </details>
+                <details>
+                    <summary>How can I contact you?</summary>
+                    <p>You can contact us via the form below or at contact@venusianbeans.com</p>
+                </details>
+                <details>
+                    <summary>Do you offer franchise opportunities?</summary>
                     <p>Yes, we offer franchise opportunities. Please visit our
-                        Franchise page for more information.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>What products do you offer?</h3>
+                        <span><a href="franchise.html">Franchise</a></span> page for more
+                        information.</p>
+                </details>
+                <details>
+                    <summary>What products do you offer?</summary>
                     <p>We offer a variety of coffee products. Please visit our
-                        Products page for more details.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>Will I be harmed by using your products?</h3>
-                    <p>Absolutly not! During manufacturing, we make sure every
-                        product is same for consuption.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>Is the creator of Venusian Beans human?</h3>
+                        <span><a href="./products.html">product</a></span> page for more details.</p>
+                </details>
+                <details>
+                    <summary>Will I be harmed by using your products?</summary>
+                    <p>Absolutely not! During manufacturing, we make sure every
+                        product is safe for consumption.</p>
+                </details>
+                <details>
+                    <summary>Is the creator of Venusian Beans human?</summary>
                     <p>Due to pending legal cases, our lawyers have advised us
                         to not comment on the subject.</p>
-                </div>
+                </details>
             </section>
             <section class="card accentBorder">
                 <div class="textContent">
@@ -95,7 +94,34 @@
                                 placeholder="Type your question here..."
                                 required></textarea>
                         </div>
-                        <button type="submit">Submit Question</button>
+                        <fieldset>
+                            <legend>Are you a robot?</legend>
+                            <label for="robot-yes">Yes:
+                            <input type="radio" id="robot-yes" name="Robot"
+                                value="yes" required>
+                            </label>
+                            <br>
+                            <label for="robot-no">No:
+                            <input type="radio" id="robot-no" name="Robot"
+                                value="no" required>
+                            </label>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Terms and Conditions</legend>
+                            <label for="data">I agree to Data Collection
+                            <input type="checkbox" id="data" name="DataCol"
+                                value="dataCol">
+                            </label>
+                            <br>
+                            <label for="EULA">I agree to the EULA
+                            <input type="checkbox" id="EULA" name="eula"
+                                value="enduserliscence">
+                            </label>
+                        </fieldset>
+                        <div class="btn-group">
+                            <button type="submit">Submit Question</button>
+                            <button type="reset">Clear Form</button>
+                        </div>
                     </form>
                 </div>
             </section>
@@ -111,6 +137,7 @@
                     <li><a class="colorChange" href="./aboutus.html">About
                             Us</a></li>
                     <li><a class="colorChange" href="./faq.html">FAQ</a></li>
+                    <li><a href="./Sandt.html">Staff and Testimonials</a></li>
                 </ul>
             </nav>
             <address>
@@ -122,7 +149,7 @@
                 </p>
                 <a href="tel:8199685799">(819) 968-5799</a>
                 <br>
-                <a href="mailto:fariselk88@gmail.com">fariselk88@gmail.com</a>
+                <a href="mailto:contact@venusianbeans.com">contact@venusianbeans.com</a>
             </address>
             <p>
                 all images generated using <a

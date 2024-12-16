@@ -169,8 +169,7 @@ footer a:hover {
 }
 
 form {
-    display: flex;
-    flex-direction: column;
+    display: grid;
     gap: 1em;
     padding: 20px;
     border-radius: 20px;
@@ -178,40 +177,55 @@ form {
 
 .form-group {
     display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 0.5em;
+    align-items: center;
 }
 
 label {
-    font-size: 1em;
+    justify-self: end;
     font-family: nasalization;
     color: var(--primary-color);
-    margin-block-end: 5px;
 }
 
 input,
-textarea {
+textarea,
+select {
+    flex-grow: 1;
+    box-sizing: border-box;
     font-size: 0.7em;
-    align-self: center;
-    width: 700px;
-    height: auto;
     padding: 10px;
     border-radius: 10px;
     border: 1px solid var(--secondary-color);
     background-color: #222;
     color: whitesmoke;
+    max-block-size: 100%;
+    
 }
 
+fieldset legend {
+    text-align: left;
+}
+
+fieldset {
+    border: 1px solid var(--secondary-color);
+
+}
+
+fieldset label, fieldset input  {
+    display: inline-block;   
+}
+
+
+
 button {
-    font-size: 1em;
-    align-self: center;
-    height: 50px;
-    width: 300px;
+    height: 5vh;
+    width: 20vw;
     padding: 10px 20px;
     border-radius: 10px;
-    border: none;
     background-color: var(--accent-color);
     color: white;
-    font-family: nasalization;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
@@ -220,6 +234,11 @@ button:hover {
     background-color: rgba(255, 91, 0, 0.8);
     transition: transform 0.3s ease;
     transform: scale(1.1);
+}
+
+.btn-group {
+    display: flex;
+    justify-content: space-evenly;
 }
 
 table {
@@ -374,20 +393,7 @@ table img {
     box-shadow: var(--box-shadow);
 }
 
-select {
-    align-self: center;
-    height: 50px;
-    width: 700px;
-    padding: 10px;
-    border-radius: 10px;
-    border: 1px solid var(--secondary-color);
-    background-color: #222;
-    color: white;
-    font-family: 'Abel', sans-serif;
-    background-position: right 10px center;
-    background-size: 1em;
-    padding-right: 40px;
-}
+
 
 select:hover {
     border-color: var(--accent-color);
@@ -407,4 +413,19 @@ select option {
 
 select option:hover {
     background-color: var(--accent-color);
+}
+
+details {
+    width: 100%;
+    border: 1px solid var(--secondary-color);
+    border-radius: 10px;
+    padding: 10px;
+    margin-block-end: 20px;
+}
+
+details p {
+    text-align: center;
+    font-size: 0.9em;
+    line-height: 1.5;
+    padding-inline-start: 50px;
 }

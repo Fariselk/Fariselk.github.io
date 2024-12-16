@@ -24,6 +24,11 @@ body {
     background-image: url("../images/stars.png");
     background-repeat: repeat;
     background-position: top center;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
 }
 
 span {
@@ -265,19 +270,15 @@ table img {
 .product {
     text-align: center;
     padding: 10px;
-    border: 1px solid var(--secondary-color);
-    border-radius: 10px;
-    background-color: #333;
 }
-
 .product img {
     display: block;
     margin: 0 auto;
-    max-inline-size: 100%;
-    block-size: auto;
-    height: 250px;
+    max-width: 100%;
     width: 450px;
-    object-fit: cover;
+    height: 250px;
+    object-fit: contain;
+    border-radius: 10px;
 }
 
 .faq-item {
@@ -478,6 +479,80 @@ div.Manu ul{
     flex-direction: column-reverse;
 }
 
+.staff-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    gap: 20px;
+    padding: 20px;
+    max-width: 100%;
+}
 
+figure {
+    margin: 10px;
+}
 
+figure.staff {
+    border: solid 5px var(--secondary-color);
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: minmax(180px, 200px) minmax(0, 1fr);
+    grid-template-rows: auto auto;
+    align-items: center;
+}
 
+figure.staff:nth-child(even) {
+    display: grid;
+    grid-template-columns: minmax(180px, 200px) minmax(0, 1fr);
+    grid-template-rows: auto auto;
+    direction: rtl;
+}
+
+figure.staff img {
+    grid-column: 1;
+    grid-row: 1;
+    height: auto;
+    width: 100%;
+}
+
+.staff-info h3 {
+    grid-column: 1;
+    grid-row: 2;
+    margin: 0;
+}
+
+.staff-text {
+    display: block;
+    grid-column: 2;
+    grid-row: 1/2;
+}
+
+.staff-text p {
+    overflow-wrap: break-word;
+    width: 100%;
+}
+
+.border {
+    display: grid;
+    border: 5px solid var(--secondary-color);
+    border-radius: 10px;
+    padding: 10px;
+    
+}
+
+.overline {
+    text-decoration: line-through;
+}
+
+span.overline {
+    text-transform: lowercase;
+    color: var(--primary-color);
+    text-decoration: line-through beige 3px;
+}
+
+video {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 10px;
+}
